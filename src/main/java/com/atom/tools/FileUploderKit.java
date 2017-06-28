@@ -119,7 +119,7 @@ public class FileUploderKit {
         //设置文件大小
         fileInfo.setSize(file.length());
         fileInfo.setName(UUID.randomUUID()+"." + extension);
-        String path = DateTimeKit.format(new Date(), "YYYYMM");	
+        String path = DateKit.format(new Date(), "YYYYMM");	
         String filePath = PropKit.get("upload.path") + typePath+path;
         
         fileInfo.setPath(filePath);

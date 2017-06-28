@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 import com.alibaba.fastjson.JSONObject;
 import com.atom.mvc.http.Response;
 import com.atom.mvc.http.ResponseHeader;
-import com.atom.tools.DateTimeKit;
+import com.atom.tools.DateKit;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Page;
 import com.jfinal.plugin.activerecord.Record;
@@ -132,7 +132,7 @@ public class BaseService {
 		if(param == null){
 			return null;
 		}
-		Date result = param == null ? new Date() : DateTimeKit.parse(param.toString());
+		Date result = param == null ? new Date() : DateKit.parse(param.toString());
 		return result;
 	}
 
